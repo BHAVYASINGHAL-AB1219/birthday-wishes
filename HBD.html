@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-y: auto;
+      background: linear-gradient(to right, #ffafbd, #ffc3a0);
+      font-family: Arial, sans-serif;
+      color: #333;
+      position: relative;
+    }
+
+    /* Background image container */
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('WhatsApp Image 2024-10-26 at 23.45.43.jpeg') center top/contain no-repeat;
+      z-index: -1;
+      filter: brightness(0.8);
+    }
+
+    .birthday-container {
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 3em;
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+      width: 90%;
+      max-width: 500px;
+      margin-top: 50px;
+    }
+
+    .birthday-container h1 {
+      font-size: 3.5em;
+      color: #ff6f61;
+    }
+
+    .birthday-container p {
+      font-size: 1.2em;
+      color: #333;
+      margin-bottom: 1em;
+    }
+
+    .birthday-container button {
+      margin-top: 1.5em;
+      padding: 12px 25px;
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .birthday-container button:hover {
+      background-color: #ff5a4a;
+    }
+
+    .image-section {
+      display: none;
+      text-align: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      width: 90%;
+      max-width: 500px;
+      max-height: 80vh;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+      overflow-y: auto;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    .image-section p {
+      font-size: 1.1em;
+      color: #333;
+      margin: 15px 0;
+    }
+
+    .image-section button {
+      margin-top: 1em;
+      padding: 8px 16px;
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .image-section button:hover {
+      background-color: #ff5a4a;
+    }
+
+    /* Floating Decoration Styles */
+    .floating-text {
+      position: absolute;
+      font-size: 1.5em;
+      color: rgba(255, 255, 255, 0.8);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .floating-text:nth-child(2) { top: 20%; left: 15%; }
+    .floating-text:nth-child(3) { top: 10%; right: 20%; }
+    .floating-text:nth-child(4) { bottom: 30%; left: 25%; }
+    .floating-text:nth-child(5) { bottom: 15%; right: 15%; }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+  </style> 
+</head>
+<body>
+
+  <!-- Background Image -->
+  <div class="background-image"></div>
+
+  <!-- Floating Text Decorations -->
+  <div class="floating-text">🎈 Happy Day!</div>
+  <div class="floating-text">🎉 Celebration Time!</div>
+  <div class="floating-text">🎂 Make a Wish!</div>
+  <div class="floating-text">🎊 Cheers!</div>
+
+  <!-- Birthday Message Section -->
+  <div class="birthday-container">
+    <h1>Happy Birthday! PRIYA</h1>
+    <p>Wishing you a fantastic year ahead! May You Get Everything Which Is Best For You!</p>
+    <button onclick="showImage()">See Your Surprise 🎉</button>
+  </div>
+
+  <!-- Hidden Special Image Section -->
+  <div class="image-section" id="imageSection">
+    <img src="WhatsApp Image 2024-10-26 at 23.41.27.jpeg" alt="Birthday Surprise 1">
+    <img src="WhatsApp Image 2024-10-26 at 23.40.01.jpeg" alt="Birthday Surprise 2">
+    <p>Here's a little surprise for you! Scroll down to see everything and enjoy these special memories!</p>
+    <button onclick="hideImage()">Close</button>
+  </div>
+
+  <script>
+    function showImage() {
+      document.getElementById("imageSection").style.display = "block";
+    }
+
+    function hideImage() {
+      document.getElementById("imageSection").style.display = "none";
+    }
+  </script>
+</body>
+</html>
